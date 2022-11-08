@@ -537,6 +537,24 @@ void x_star_pattern()
     printf("\n");  
   }
 }
+void star_pattern()
+{
+  int N,i,k;
+    printf("Enter the number of rows\n");
+    scanf("%d",&N);
+    if(N<1 || N > 15){printf("Wrong input: ");return;}
+    else
+    for (i=0;i < N;i++){ //rows
+        for(k =0; k < N; k++){ //columns
+            if((k == N/2) || (i == N/2) || (k == i) || (k == N - i - 1))
+                printf("*");
+            else 
+                printf("_"); // space
+
+        }
+        printf("\n");
+    }
+}
 int main()
 {  
     hollow_Square_Star_pattern();
@@ -564,5 +582,6 @@ int main()
     left_arrow_star();
     plus_star_pattern();
     x_star_pattern();
+    star_pattern();
     return 0;
 }
